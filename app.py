@@ -152,5 +152,11 @@ def AddProductPage():
 @app.route('/estimator')
 def EstimatorPage():
     return render_template('estimator.html')
+
+@app.route('/helping-hand')
+def HelpingHandPage():
+    return render_template('helpinghand.html')
+
+
 if __name__ == '__main__':
     app.run(debug=True)
