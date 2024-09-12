@@ -149,5 +149,8 @@ def AddProductPage():
     if request.method == 'GET':
         return render_template('addProduct.html')
     
+@app.route('/estimator')
+def EstimatorPage():
+    return render_template('estimator.html')
 if __name__ == '__main__':
     app.run(debug=True)

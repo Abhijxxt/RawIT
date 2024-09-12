@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rebar Cost Estimator</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/estimator.css')}}">
+</head>
+<body>
+
+    <header>
+        <div class="brand-name">
+            <img class="brand-image" src="{{url_for('static',filename='/assets/logo.png')}}" alt="" id="logo">
+            <div class="header-title">
+                <h1 id="name">Raw-IT</h1>
+                <p id="header-slogan">Crafting dream space</p>
+            </div>
+        </div>
+        <div class="navbar">
+            <a href="{{url_for('ProductPage')}}">Products</a>
+            <a href="{{url_for('AboutUsPage')}}">About Us</a>
+            <a href="{{url_for('ContactPage')}}">Contact</a>
+            <!-- <img src="{{userimage}}" id="userimage" width="40px" height="40px" alt=""> -->
+            <!-- <p>{{username}}</p> -->
+        </div>
+    </header>
+
+    <section class="rebar-estimator-container">
+        <div class="container">
+            <!-- Explanation Section -->
+            <div class="info-box">
+                <h2>Rebar Cost Estimator</h2>
+                <p>
+                    The cost of rebar is calculated based on the following inputs:
+                </p>
+                <ul>
+                    <li><strong>Area (Sq. Ft.):</strong> The total area of your construction.</li>
+                    <li><strong>Number of Floors:</strong> The total number of floors in your building.</li>
+                    <li><strong>Rebar Type:</strong> The grade of rebar (Grade 60 or Grade 40) you are using.</li>
+                </ul>
+                <p>
+                    Use this tool to quickly estimate the cost of the rebar required for your project.
+                </p>
+                
+            </div>
+            
+            
+            <!-- Form Section -->
+            <div class="form-section">
+                
+                <form id="rebar-form">
+                    <div class="form-group">
+                        <label for="area">Area (Sq. Ft):</label>
+                        <input type="number" id="area" name="area" placeholder="Area" autofocus required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="floors">Number of Floors:</label>
+                        <select id="floors" name="floors">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="rebar-type">Rebar Type:</label>
+                        <select id="rebar-type" name="rebar-type">
+                            <option value="grade60">Grade 60</option>
+                            <option value="grade40">Grade 40</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" id="estimate-button">Estimate Cost & View Floor Plan</button>
+                </form>
+<!--                 
+                <div id="results">
+                    <div class="display">
+                        <h2>Estimated Rebar Cost:</h2>
+                        <p id="cost">₹------</p>
+                    </div>
+                    <div class="floor-plan-button-container">
+                        <a href="#"><button>View Floor Plan</button></a>
+                    </div>
+                    
+                </div> -->
+            </div>
+        </div>
+        
+    </section>
+   
+    <section class="floor-planner-container" id="floorPlan">
+        <div class="floor-planner-title">
+            <h1>Floor Plan & Cost Viewer</h1>
+        </div>
+        <div class="floor-planner-inner-container">
+
+            <div class="floor-planner-box">
+                <div class="floor-plan-view-container" id="floorPlanImage">
+                    <div class="floor-plan-view" >
+                        <!-- <img src="{{url_for('static',filename='/assets/loginImage.jpg')}}" alt=""> -->
+                    </div>
+                </div>
+                <div class="cost-estimator-container">
+                    <div class="cost-estimator">
+                        <p id="floorplanarea">Area: XXX sq/ft</p>
+                        <p id="floorplanfloor">Floor: XX</p>
+                        <p id="floorplanrebar">Rebar Type: XXXXXX</p>
+                        <hr>
+                        <p id="cost">Cost: XXXXX</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+    <footer>
+        <div class="info">
+            <div class="info-title">
+                <p>Raw IT</p>
+            </div>
+            <div class="about-us">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam at vero.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus impedit voluptatum exercitationem adipisci, cupiditate dolorum maiores tenetur nulla magni iusto dolores animi eaque vitae consequatur laboriosam ab voluptas. Minus, saepe.
+                    lorem
+                </p>
+            </div>
+            <div class="contacts">
+                <p>8707293263</p>
+                <p>abhijeetchatterjee2004@gmail.com</p>
+            </div>
+        </div>
+        <div class="logo">
+            <img class="logo-image" src="{{url_for('static',filename='assets/logo.png')}}" alt="">
+        </div>
+    </footer>
+
+    <script>
+        const rebarForm = document.getElementById('rebar-form');
+        const results = document.getElementById('results');
+        const cost = document.getElementById('cost');
+        const floorplanarea= document.getElementById('floorplanarea');
+        const floorplanfloor = document.getElementById('floorplanfloor');
+        const floorplanrebar = document.getElementById('floorplanrebar');
+
+        rebarForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const area = parseFloat(document.getElementById('area').value);
+            const floors = parseInt(document.getElementById('floors').value);
+            const rebarType = document.getElementById('rebar-type').value;
+
+            let rebarCostPerSqFt;
+            if (rebarType === 'grade60') {
+                rebarCostPerSqFt = 1200;  // Price per Sq Ft in INR for Grade 60
+            } else {
+                rebarCostPerSqFt = 800;   // Price per Sq Ft in INR for Grade 40
+            }
+            const totalCost = area * floors * rebarCostPerSqFt;
+            
+            cost.textContent = `₹${totalCost.toLocaleString('en-IN')}`;
+            floorplanarea.textContent = `Area: ${area} sq/ft`;
+            floorplanfloor.textContent = `Floor: ${floors}`
+            floorplanrebar.textContent = `Rebar Type: ${rebarType}`;
+            displayFloorPlan(area,floors)
+        });
+
+        function displayFloorPlan(area, floor) {
+            let image_url = "";
+            if(area>=100 && area<=400 && floor == 1) {
+                image_url = "{{ url_for('static', filename='assets/floorDesigns/FPA200F1.jpg') }}";
+            }
+            if(area>=100 && area<=400 && floor > 1) {
+                image_url = "{{ url_for('static', filename='assets/floorDesigns/FPA200F2.jpg') }}";
+            }
+            if(area>400 && area<=800 && floor == 1) {
+                image_url = "{{ url_for('static', filename='assets/floorDesigns/FPA1000F1.jpg') }}";
+            }
+            if(area>400 && area<=800 && floor > 1) {
+                image_url = "{{ url_for('static', filename='assets/floorDesigns/FPA700F2.jpg') }}";
+            }
+            if(area>800 && area<=1000 && floor == 1) {
+                image_url = "{{ url_for('static', filename='assets/floorDesigns/FPA900F1.png') }}";
+            }
+            if(area>800 && area<=1000 && floor > 1) {
+                image_url = "{{ url_for('static', filename='assets/floorDesigns/FPA1000F2.jpeg') }}";
+            }
+            // let image_url = "url('../assets/floorDesigns/FPA1000F2.jpg')";
+            document.getElementById('floorPlanImage').style.backgroundImage = `url('${image_url}'`;
+        }
+    </script>
+
+</body>
+</html>

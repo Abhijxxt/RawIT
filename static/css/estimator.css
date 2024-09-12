@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* header */
+
+header {
+    padding: 5px 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-name {
+    margin-left: 10%;
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.brand-image {
+    width: 100px;
+}
+#name {
+    color: #0A122A;
+    text-align: left;
+}
+#header-slogan {
+    color: #414141;
+    font-size: 14px;
+}
+.brand-name p {
+    font-weight: 800;
+    font-size: 25px;
+    letter-spacing: 1.4px;
+    color: #0A122A;
+}
+
+.navbar {
+    margin-right: 10%;
+    color: #0A122A;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #0A122A;
+    padding: 0px 25px;
+    transition: all ease-in-out 0.1s;
+}
+
+.navbar a:hover {
+    border-bottom: 1px solid #0A122A;
+    font-weight: 600;
+}
+#userimage {
+    margin-left: 10px;
+}
+
+/* header css end */
+/* body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    background: url('../assets/modular_bed.jpg') no-repeat center center fixed;
+    background-size: cover;
+} */
+
+/* .background-blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(8px);
+    z-index: -1;
+} */
+
+.rebar-estimator-container {
+    background: url('../assets/modular_bed.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #004b8d;
+    backdrop-filter: blur(5px);
+    padding: 10px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    /* padding: 30px; */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+    display: flex;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #004b8d;
+    font-weight: 500;
+}
+
+.info-box {
+    width: 50%;
+    padding: 30px 40px;
+    background-color: #0A122A;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.info-box h2 {
+    color: #FFF;
+    font-size: 28px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.info-box p {
+    line-height: 1.6;
+    color: #e1e1e1;
+}
+
+
+
+.form-section {
+    width: 50%;
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #004b8d;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    background-color: #335ad1;
+    color: #fff;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #5171d1;
+}
+
+#estimate-button {
+    background-color: #0A122A;
+}
+#estimate-button:hover {
+    background-color: #335ad1;
+}
+
+#results {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 20px;
+    text-align: center;
+}
+.display {
+    background-color: #004b8d;
+    width: 60%;
+}
+.floor-plan-button-container {
+    background-color: #333;
+    width: 40%;
+    margin-top: 20px;
+}
+
+
+#cost {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+
+.floor-planner-container {
+    width: 100%;
+    height: 70vh;
+    background-color: #B2ECE1;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.floor-planner-title h1 {
+    text-align: center;
+    padding: 35px;
+    color: #0A122A;
+    font-weight: 600;
+}
+
+.floor-planner-inner-container {
+    width: 100%;
+    /* background-color: #ccc; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.floor-planner-box {
+    padding: 20px;
+    width: 60%;
+    height: 40vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #f6f6f6;
+    border-radius: 10px;
+}
+
+.floor-plan-view-container {
+    width:  40%;
+    height: 100%;
+    /* background-color: #004b8d; */
+    /* background: url("../assets/floorDesigns/FPA1000F2.jpg"); */
+    
+    border-radius: 10px 0px 0px 10px;
+}
+#floorPlanImage {
+    background-image: url('../assets/branding_background.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* .floor-plan-view img {
+    width: 50%;
+} */
+.cost-estimator-container {
+    width: 60%;
+    height: 100%;
+    background-color: #0A122A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.cost-estimator {
+    padding: 20px;
+    width: 100%;
+}
+.cost-estimator p {
+    font-size: 20px;
+    padding: 10px 0px;
+}
+
+#cost {
+    padding: 10px;
+    color: #335ad1;
+    font-size: 24px;
+    text-align: right;
+    font-weight: 800;
+}
+
+/* footer css starts  */
+footer {
+    /* margin-top: 70px; */
+    height: 40vh;
+    background-color: #0A122A;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.info {
+    width: 50%;
+}
+
+.info-title {
+    padding: 20px 30px;
+    font-size: 30px;
+}
+.info-title p{
+    font-weight: 700;
+}
+.contacts {
+    padding: 20px 30px;
+}
+
+.about-us {
+    padding: 20px 30px;
+}
+
+.logo {
+    /* background-color: #B2ECE1; */
+    margin-left: 30px;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo-image {
+    width: 55%;
+    border-radius: 10px;
+}
+
+
+/* footer css ends */
