@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raw-IT | Home</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/home.css')}}">
+</head>
+<body>
+    <header>
+        <div class="brand-name">
+            <img class="brand-image" src="{{url_for('static',filename='/assets/logo.png')}}" alt="" id="logo">
+            <div class="header-title">
+                <h1 id="name">Raw-IT</h1>
+                <p id="header-slogan">Crafting dream space</p>
+            </div>
+        </div>
+        <div class="navbar">
+            <a href="{{url_for('ProductPage')}}">Products</a>
+            <a href="{{url_for('AboutUsPage')}}">About Us</a>
+            <a href="{{url_for('ContactPage')}}">Contact</a>
+            <img src="{{userimage}}" id="userimage" width="40px" height="40px" alt="">
+            <!-- <p>{{username}}</p> -->
+        </div>
+    </header>
+
+    <section class="branding">
+        <div class="branding-container">
+            <div class="branding-box">
+                <h1>Raw IT</h1>
+                <p>Everything you need is here.</p>
+                <p style="text-align: right;">- {{username}}</p>
+                <p id="moreinfo">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit sed nulla libero veniam itaque quos iure, autem necessitatibus, expedita eius at quam. Nobis quod at sed odio officiis, repellat dolor?
+                </p>
+            </div>
+            <div class="login-signup-container">
+                <a href="{{url_for('LoginPage')}}" id="login-btn">Login</a>
+                <a href="{{url_for('SignupPage')}}" id="signup-btn">Sign Up</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="best-deals-container">
+        <div class="best-deals-title">
+            <p>Top Offers</p>
+        </div>
+        <div class="best-deals-box">
+            <div class="left-arrow">
+                <a href="#">Previous</a>
+            </div>
+            <div class="deal-image">
+                
+            </div>
+            <div class="deal-info">
+                <div class="deal-title">
+                    <h1>Floral Wallpaper</h1>
+                    <p>Harmanpreets Ltd.</p>
+                </div>
+                <div class="deal-description">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit esse eaque ipsum dolores eos, omnis libero aperiam, quas maxime doloremque earum accusamus error nulla accusantium sunt, eius incidunt commodi sint?
+                    </p>
+                </div>
+                <div class="purchase">
+                    <p>Price: ₹100</p>
+                    <a href="#">Buy</a>
+                </div>
+            </div>
+            <div class="right-arrow">
+                <a href="#">Next</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="products-container">
+        <div class="products-title">
+            <p>Products</p>
+        </div>
+        <div class="products-box">
+            {% for product in products %}
+            <div class="product">
+                <div class="product-title">
+                    <h1>{{product['name']}}</h1>
+                </div>
+                <div class="product-image-box">
+                    <img class="product-image" src="{{product['image']}}" alt="">
+                    <a href="#">Know More</a>
+                </div>
+                <hr>
+                <div class="product-purchase">
+                    <p>₹{{product['price']}}</p>
+                    <a href="#">Buy</a>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+        <div class="more-products-link">
+            <a href="{{url_for('ProductPage')}}">Show All Products</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="info">
+            <div class="info-title">
+                <p>Raw IT</p>
+            </div>
+            <div class="about-us">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam at vero.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus impedit voluptatum exercitationem adipisci, cupiditate dolorum maiores tenetur nulla magni iusto dolores animi eaque vitae consequatur laboriosam ab voluptas. Minus, saepe.
+                    lorem
+                </p>
+            </div>
+            <div class="contacts">
+                <p>8707293263</p>
+                <p>abhijeetchatterjee2004@gmail.com</p>
+            </div>
+        </div>
+        <div class="logo">
+            <img class="logo-image" src="{{url_for('static',filename='assets/logo.png')}}" alt="">
+        </div>
+    </footer>
+</body>
+
+</html>

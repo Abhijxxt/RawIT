@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raw IT | Contact</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/contact.css')}}">
+</head>
+<body>
+    <header>
+        <div class="brand-name">
+            <img class="brand-image" src="{{url_for('static',filename='/assets/logo.png')}}" alt="" id="logo">
+            <div class="header-title">
+                <h1 id="name">Raw-IT</h1>
+                <p id="header-slogan">Crafting dream space</p>
+            </div>
+        </div>
+        <div class="navbar">
+            <a href="{{url_for('AboutUsPage')}}">Products</a>
+            <a href="{{url_for('AboutUsPage')}}">About Us</a>
+            <a href="{{url_for('ContactPage')}}">Contact</a>
+            <!-- <p>{{user}}</p> -->
+        </div>
+    </header>
+
+    <section class="contact-container">
+        <div class="image-container">
+
+        </div>
+        <div class="contact-form-container">
+            <div class="contact-form-title">
+                <h1>Contact Us</h1>
+            </div>
+            <form action="/contact-us" method="POST">
+                <div class="form-container">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" placeholder="Email" autofocus required> <br/>
+                    
+                    <label for="issue">Issue</label>
+                    <input type="text" name="issue" placeholder="General issue" required> <br/>
+                    
+                    <label for="description">Description</label> <br/>
+                    <textarea name="description" placeholder="Describe the issue"></textarea>
+                </div>
+                <div class="send-button-container">
+                    <input type="submit" class="send-button"  value="SEND">
+                </div>
+            </form>
+        </div>
+    </section>
+
+</body>
+</html>

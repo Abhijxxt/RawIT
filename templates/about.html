@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raw IT | About</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='/css/about.css')}}">
+</head>
+<body>
+    <header>
+        <div class="brand-name">
+            <img class="brand-image" src="{{url_for('static',filename='/assets/logo.png')}}" alt="" id="logo">
+            <div class="header-title">
+                <h1 id="name">Raw-IT</h1>
+                <p id="header-slogan">Crafting dream space</p>
+            </div>
+        </div>
+        <div class="navbar">
+            <a href="{{url_for('ProductPage')}}">Products</a>
+            <a href="{{url_for('AboutUsPage')}}">About Us</a>
+            <a href="{{url_for('ContactPage')}}">Contact</a>
+            <!-- <img src="{{userimage}}" id="userimage" width="40px" height="40px" alt=""> -->
+            <!-- <p>{{username}}</p> -->
+        </div>
+    </header>
+   
+    <section class="vision-container">
+        <div class="image-container">
+
+        </div>
+        <div class="vision-box">
+            <div class="vision-overview">
+                <div class="vision-title">
+                    <h1>Our Vision</h1>
+                </div>
+                <div class="vision-description">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, ipsa asperiores? Quas cupiditate itaque maiores! Suscipit illo error voluptas repellat autem magni nisi soluta debitis, non iusto, corporis quae voluptatibus?
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo soluta quos quas aspernatur veniam magnam, possimus eos esse illum, voluptatum, impedit ipsa nulla. Quas, ipsum illo animi suscipit harum dolore!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita veritatis iusto dignissimos harum animi magnam consectetur aperiam, sapiente voluptas suscipit corporis nam vitae laudantium nostrum, quasi veniam architecto sunt quae.
+                    </p>
+                </div>
+            </div>
+            <div class="vision-buttons">
+                <a href="#box">Visionaries</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="directors-container">
+        <div class="directors-title">
+            <h1>Directors</h1>
+        </div>
+        <div class="directors-box">
+            <div class="director-box" id="box">
+                <div class="director-name">
+                    <p>Prakhar Dixit</p>
+                </div>
+                <div class="director-image-container">
+                    <img src="{{url_for('static',filename='/assets/prakhar.jpg')}}" alt="">
+                </div>
+                <div class="director-description">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio harum, doloribus et sint quis velit dolores natus, ipsum temporibus minus modi neque, at explicabo in reprehenderit nemo ut veniam eaque.</p>
+                </div>
+                <div class="director-position">
+                    <p>CEO, Chief Executive Officer</p>
+                </div>
+            </div>
+            <div class="director-box">
+                <div class="director-name">
+                    <p>Abhijeet Chatterjee</p>
+                </div>
+                <div class="director-image-container">
+                    <img src="{{url_for('static',filename='/assets/abhijeet.png')}}" alt="">
+                </div>
+                <div class="director-description">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio harum, doloribus et sint quis velit dolores natus, ipsum temporibus minus modi neque, at explicabo in reprehenderit nemo ut veniam eaque.</p>
+                </div>
+                <div class="director-position">
+                    <p>CTO, Chief Technical Officer</p>
+                </div>
+            </div>
+            <div class="director-box">
+                <div class="director-name">
+                    <p>Anukrat Gupta</p>
+                </div>
+                <div class="director-image-container">
+                    <img src="{{url_for('static',filename='/assets/anukrat.jpg')}}" alt="">
+                </div>
+                <div class="director-description">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio harum, doloribus et sint quis velit dolores natus, ipsum temporibus minus modi neque, at explicabo in reprehenderit nemo ut veniam eaque.</p>
+                </div>
+                <div class="director-position">
+                    <p>Senior Developer</p>
+                </div>
+            </div>
+        </div>
+        <div class="more">
+            <a href="#">Learn more</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="info">
+            <div class="info-title">
+                <p>Raw IT</p>
+            </div>
+            <div class="about-us">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam at vero.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus impedit voluptatum exercitationem adipisci, cupiditate dolorum maiores tenetur nulla magni iusto dolores animi eaque vitae consequatur laboriosam ab voluptas. Minus, saepe.
+                    lorem
+                </p>
+            </div>
+            <div class="contacts">
+                <p>8707293263</p>
+                <p>abhijeetchatterjee2004@gmail.com</p>
+            </div>
+        </div>
+        <div class="logo">
+            <img class="logo-image" src="{{url_for('static',filename='assets/logo.png')}}" alt="">
+        </div>
+    </footer>
+
+</body>
+</html>

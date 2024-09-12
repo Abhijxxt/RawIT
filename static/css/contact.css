@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* header */
+
+header {
+    padding: 5px 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-name {
+    margin-left: 10%;
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.brand-image {
+    width: 100px;
+}
+#name {
+    color: #0A122A;
+}
+#header-slogan {
+    color: #414141;
+    font-size: 14px;
+}
+.brand-name p {
+    font-weight: 800;
+    font-size: 25px;
+    letter-spacing: 1.4px;
+    color: #0A122A;
+}
+
+.navbar {
+    margin-right: 10%;
+    color: #0A122A;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #0A122A;
+    padding: 0px 25px;
+    transition: all ease-in-out 0.1s;
+}
+
+.navbar a:hover {
+    border-bottom: 1px solid #0A122A;
+    font-weight: 600;
+}
+
+/* header css end */
+/* contract css start */
+.contact-container {
+    background-color: #B2ECE1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 80vh;
+}
+
+.image-container {
+    width: 50%;
+    background: url('../assets/loginImage.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.contact-form-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding: 20px;
+}
+
+.contact-form-title {
+    padding: 20px;
+    text-align: left;
+}
+.contact-form-title h1{
+    font-weight: 600;
+}
+.form-container {
+    /* background-color: #414141; */
+    padding: 20px;
+    width: 80%;
+}
+
+label {
+    color:#0A122A;
+    font-size: 18px;
+    padding: 20px;
+}
+
+input[type='text'],
+input[type='email'] {
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 16px;
+    margin: 10px 0px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+textarea {
+    width: 103%;
+    height: 30vh;
+    resize: none;
+    padding: 10px;
+    margin: 10px 0px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+.send-button-container {
+    position: absolute;
+    top: 15.9vh;
+    right: 0px;
+}
+.send-button {
+    padding: 20px;
+    height: 80vh;
+    background-color: #0A122A;
+    color: white;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-size: 22px;
+    transition: all ease-in-out 0.2s;
+}
+.send-button:hover {
+    background-color: #335ad1;
+    color: black;
+}
+
+/* contract css end */

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Issues | Admin</title>
+</head>
+<body>
+    {% for i in issue %}
+    <div>
+        <p>{{i['email']}}</p>
+        <p>{{i['issue']}}</p>
+        <p>{{i['description']}}</p>
+        <hr>
+    </div>
+    {% endfor %}
+</body>
+</html>

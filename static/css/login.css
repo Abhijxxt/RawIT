@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+main {
+    background-color: aqua;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100vh;
+}
+
+.image-container {
+    width: 60%;
+    height: 100%;
+    background-color: bisque;
+    background: url('../assets/loginImage.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.title {
+    margin-left: 50px;
+    padding: 40px 50px;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
+    letter-spacing: 1.5px;
+} 
+
+
+.login-container {
+    width: 40%;
+    height: 100%;
+    background-color: #0A122A;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.login-title {
+    padding: 20px;
+}
+.login-form {
+    background-color: #B2ECE1;
+    width: 60%;
+    height: 60%;
+    border-radius: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px;
+    position: relative;
+    height: 100%;
+}
+
+.email-label,
+.password-label {
+    color:#0A122A;
+    font-weight: 700;
+    margin-bottom: 8px;
+    margin-left: 10px;
+}
+
+input[type='email'],
+input[type='password'] {
+    outline: none;
+    border: none;
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+#submit-btn {
+    position: absolute;
+    bottom: 100px;
+    right: 40px;
+    width: 80%;
+    background-color: #0A122A;
+    color: white;
+    font-size: 22px;
+    padding: 10px 0px;
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.4);
+    transition: all ease-in-out 0.2s;
+}
+
+#submit-btn:hover {
+    box-shadow: none;
+}
+
+.social-login {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.social-login a {
+    margin: 0px 14px;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    transition: background-color 0.3s;
+    background-color: white;
+}
+
+.social-login a:hover {
+    background-color: #f0f0f0;
+}
+
+.social-login a.apple {
+    color: #000; /* Black for Apple icon */
+}
+
+.social-login a.google {
+    color: #DB4437; /* Google red */
+}
+
+.social-login a.twitter {
+    color: #1DA1F2; /* Twitter blue */
+}

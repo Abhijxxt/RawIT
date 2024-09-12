@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raw IT | Products</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='/css/products.css')}}">
+</head>
+<body>
+    <header>
+        <div class="brand-name">
+            <img class="brand-image" src="{{url_for('static',filename='/assets/logo.png')}}" alt="" id="logo">
+            <div class="header-title">
+                <h1 id="name">Raw-IT</h1>
+                <p id="header-slogan">Crafting dream space</p>
+            </div>
+        </div>
+        <div class="navbar">
+            <a href="{{url_for('ProductPage')}}">Products</a>
+            <a href="{{url_for('AboutUsPage')}}">About Us</a>
+            <a href="{{url_for('ContactPage')}}">Contact</a>
+            <!-- <img src="{{userimage}}" id="userimage" width="40px" height="40px" alt=""> -->
+            <!-- <p>{{username}}</p> -->
+        </div>
+    </header>
+
+    <section class="tool-container">
+        <div class="tool-box">
+            <div class="searchbar">
+                <div class="searchbox">
+                    <input type="text" placeholder="Searchbar" autofocus>
+                    <button>Search</button>
+                </div>
+            </div>
+            <div class="tools">
+                <a id="estimator" href="#">Estimator</a>
+                <a id="helping" href="#">Helping Hand</a>
+                <a id="help" href="#">?</a>
+            </div>
+        </div>
+        <div class="category-container">
+            <a href="#">Walls</a>
+            <a href="#">PVC's</a>
+            <a href="#">Kitchen Appliances</a>
+            <a href="#">Bathroom</a>
+            <a href="#">Living Rooms</a>
+        </div>
+    </section>
+
+    <section class="products-container">
+        <div class="products-title">
+            <p>Products</p>
+        </div>
+        <div class="products-box">
+            {% for product in products %}
+            <div class="product">
+                <div class="product-title">
+                    <h1>{{product['name']}}</h1>
+                </div>
+                <div class="product-image-box">
+                    <img class="product-image" src="{{product['image']}}" alt="">
+                    <a href="#">Know More</a>
+                </div>
+                <hr>
+                <div class="product-purchase">
+                    <p>₹{{product['price']}}</p>
+                    <a href="#">Buy</a>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+        <div class="more-products-link">
+            <a href="#">Show More Products</a>
+        </div>
+    </section>
+
+
+</body>
+</html>

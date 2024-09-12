@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raw-IT | Login</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='/css/login.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+</head>
+<body>
+    <main>
+        <div class="image-container">
+            <div class="title">
+                <div>
+                    <h1>Raw IT</h1>
+                    <p>Everything you need is here</p>
+                </div>
+            </div>
+        </div>
+        <div class="login-container">
+            <div class="login-title">
+                <h1>Login Page</h1>
+            </div>
+            <div class="login-form">
+                <form action="/login" method="POST">
+                    
+                    <label for="email" class="email-label" >Email</label>
+                    <input type="email" name="email" id="email-field" placeholder="xyz@gmail.com" autofocus required> <br/>
+                    <label for="password" class="password-label">Password</label>
+                    <input type="password" name="password" id="password-field" placeholder="*********" required> <br/>
+                    <input type="submit" value="Login" id="submit-btn">
+                
+                    <div class="social-login">
+                        <a href="#" class="apple"><i class="fab fa-apple"></i></a>
+                        <a href="#" class="google"><i class="fab fa-google"></i></a>
+                        <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
