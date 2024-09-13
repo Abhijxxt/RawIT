@@ -134,12 +134,27 @@ button:hover {
 }
 #estimator {
     width: 20%;
+    transition: all 0.2s ease-in-out;
+}
+#estimator:hover {
+    background-color: #B2ECE1;
+    color:#0A122A;
 }
 #helping {
     width: 40%;
+    transition: all 0.2s ease-in-out;
+}
+#helping:hover {
+    background-color: #B2ECE1;
+    color:#0A122A;
 }
 #help {
     width: 10%;
+    transition: all 0.2s ease-in-out;
+}
+#help:hover {
+    background-color: #B2ECE1;
+    color:#0A122A;
 }
 
 

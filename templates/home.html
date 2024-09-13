@@ -20,7 +20,9 @@
             <a href="{{url_for('ProductPage')}}">Products</a>
             <a href="{{url_for('AboutUsPage')}}">About Us</a>
             <a href="{{url_for('ContactPage')}}">Contact</a>
+            {% if userimage != ''%}
             <img src="{{userimage}}" id="userimage" width="40px" height="40px" alt="">
+            {% endif %}
             <!-- <p>{{username}}</p> -->
         </div>
     </header>
@@ -32,7 +34,7 @@
                 <p>Everything you need is here.</p>
                 <p style="text-align: right;">- {{username}}</p>
                 <p id="moreinfo">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit sed nulla libero veniam itaque quos iure, autem necessitatibus, expedita eius at quam. Nobis quod at sed odio officiis, repellat dolor?
+                    Rawit is more than just an e-commerce site; it's your partner in construction. With our vast selection, commitment to quality, and exceptional service, we're here to help you build with confidence.    
                 </p>
             </div>
             <div class="login-signup-container">
@@ -108,9 +110,7 @@
                 <p>Raw IT</p>
             </div>
             <div class="about-us">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam at vero.
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus impedit voluptatum exercitationem adipisci, cupiditate dolorum maiores tenetur nulla magni iusto dolores animi eaque vitae consequatur laboriosam ab voluptas. Minus, saepe.
-                    lorem
+                <p>Rawit is a leading online marketplace dedicated to providing a comprehensive selection of high-quality raw building materials. Our platform is designed to meet the needs of construction professionals, contractors, and DIY enthusiasts by offering an extensive range of essential materials for any building project.
                 </p>
             </div>
             <div class="contacts">

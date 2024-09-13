@@ -42,7 +42,7 @@ def HomePage():
         #         product_data[random.randrange(0,len(product_data))],
         #         product_data[random.randrange(0,len(product_data))]
         #     ]
-        return render_template('home.html', username='Username', userimage='https://avatar.iran.liara.run/public/90', products=product_data[-4:])
+        return render_template('home.html', username='Username', userimage='', products=product_data[-4:])
     if request.method == 'POST':
         pass
         #Render template with user email use session in flask
@@ -157,6 +157,9 @@ def EstimatorPage():
 def HelpingHandPage():
     return render_template('helpinghand.html')
 
+@app.route('/buy-page')
+def BuyPage():
+    return render_template('buypage.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
