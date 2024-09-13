@@ -161,5 +161,9 @@ def HelpingHandPage():
 def BuyPage():
     return render_template('buypage.html')
 
+@app.route('/consult')
+def ConsultancyPage():
+    return render_template('consultancy.html')
+
 if __name__ == '__main__':
     app.run(debug=True)

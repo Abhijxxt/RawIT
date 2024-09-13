@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raw IT | Consultancy</title>
+</head>
+<body>
+    <header>
+        <div class="brand-name">
+            <img class="brand-image" src="{{url_for('static',filename='/assets/logo.png')}}" alt="" id="logo">
+            <div class="header-title">
+                <h1 id="name">Raw-IT</h1>
+                <p id="header-slogan">Crafting dream space</p>
+            </div>
+        </div>
+        <div class="navbar">
+            <a href="{{url_for('HomePage')}}">Home</a>
+            <a href="{{url_for('ProductPage')}}">Products</a>
+            <a href="{{url_for('AboutUsPage')}}">About Us</a>
+            <a href="{{url_for('ContactPage')}}">Contact</a>
+            
+            <!-- <p>{{username}}</p> -->
+        </div>
+    </header>
+
+    <section class="consultancy-section">
+        <div class="consultancy-box">
+            <div class="consult-title">
+                <h1>Types of consultancy we offer</h1>
+            </div>
+            <div class="consult-info">
+                <p>Our construction consultancy expert offers services in project management, cost estimation, design planning, legal advice, sustainability, quality control, and safety management. They also assist with technology integration, supply chain optimization, and regulatory compliance. Their goal is to streamline processes, reduce costs, improve quality, and ensure efficient, safe, and sustainable construction practices for the company.</p>
+            </div>
+            <div class="consult-button-box">
+                <a href="#"><button>TALK TO AN EXPERT</button></a>
+            </div>
+        </div>
+    </section>
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* header */
+
+header {
+    padding: 5px 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-name {
+    margin-left: 10%;
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.brand-image {
+    width: 100px;
+}
+#name {
+    color: #0A122A;
+}
+#header-slogan {
+    color: #414141;
+    font-size: 14px;
+}
+.brand-name p {
+    font-weight: 800;
+    font-size: 25px;
+    letter-spacing: 1.4px;
+    color: #0A122A;
+}
+
+.navbar {
+    margin-right: 10%;
+    color: #0A122A;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #0A122A;
+    padding: 0px 25px;
+    transition: all ease-in-out 0.1s;
+}
+
+.navbar a:hover {
+    border-bottom: 1px solid #0A122A;
+    font-weight: 600;
+}
+#userimage {
+    margin-left: 10px;
+}
+
+/* header css end */
+.consultancy-section {
+    width: 100%;
+    height: 80vh;
+    background-color: #0A122A;
+    background: url('../static/assets/consultancy.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.consultancy-box {
+    width: 25%;
+    /* background-color: white; */
+    color: white;
+    padding: 20px;
+    margin-right: 35%;
+}
+.consult-title {
+    margin-bottom: 15px;
+}
+.consult-title h1 {
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    font-size: 28px;
+}
+button {
+    margin-top: 20px;
+    width: 80%;
+    background-color: #B2ECE1;
+    padding: 10px 20px;
+    outline: none;
+    border:  none;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+}
+button:hover {
+    background-color: #0A122A;
+    color: white;
+}
+
+</style>
+</html>
