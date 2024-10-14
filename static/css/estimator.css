@@ -87,7 +87,7 @@ header {
 } */
 
 .rebar-estimator-container {
-    background: url('../assets/modular_bed.jpg');
+    background: url('../assets/modular_bed.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -263,7 +263,7 @@ button:hover {
     border-radius: 10px 0px 0px 10px;
 }
 #floorPlanImage {
-    background-image: url('../assets/branding_background.jpg');
+    background-image: url('../assets/branding_background.webp');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;

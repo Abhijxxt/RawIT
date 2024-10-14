@@ -19,7 +19,7 @@ main {
     width: 60%;
     height: 100%;
     background-color: bisque;
-    background: url('../assets/loginImage.jpg');
+    background: url('../assets/loginImage.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

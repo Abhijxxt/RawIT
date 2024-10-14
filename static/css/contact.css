@@ -70,7 +70,7 @@ header {
 
 .image-container {
     width: 50%;
-    background: url('../assets/loginImage.jpg');
+    background: url('../assets/loginImage.webp');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

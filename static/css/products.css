@@ -73,7 +73,7 @@ header {
     background-color: #0A122A;
     height: 80vh;
     background-image:linear-gradient(150deg, rgba(40,85,221,0.7) 0%, rgba(178,236,225,0.7) 100%),
-    url('../assets/loginImage.jpg');
+    url('../assets/loginImage.webp');
     ;
     background-size: cover;
     background-position: center;

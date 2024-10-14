@@ -78,7 +78,7 @@ header {
 }
 .image-container {
     width: 40%;
-    background: url('../assets/loginImage.jpg');
+    background: url('../assets/loginImage.webp');
     background-size: cover;
     background-repeat: no-repeat;
     /* background-color: #414141; */
